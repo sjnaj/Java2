@@ -1,0 +1,13 @@
+{
+    "java.project.sourcePaths": [
+        "stream",
+        "functional",
+        "collections",
+        "concurrent"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/home/fengsc/Desktop/java-Example/OnJava8-Examples/reflection/build/libs/reflection.jar"
+    ],
+    "java.format.settings.url": ".vscode/java-formatter.xml"
+}
