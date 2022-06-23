@@ -2,7 +2,7 @@
 /**
  * @Author: fengsc
  * @Date: 2022-06-06 10:15:25
- * @LastEditTime: 2022-06-06 10:34:12
+ * @LastEditTime: 2022-06-06 13:39:26
  */
 import java.util.*;
 import java.util.stream.*;
@@ -20,7 +20,6 @@ public class ParallelPrime {
     public static void main(String[] args) throws IOException {
         Timer timer = new Timer();
         List<String> primes =
-
                 iterate(2, i -> i + 1)
                         .parallel()
                         .filter(ParallelPrime::isPrime)

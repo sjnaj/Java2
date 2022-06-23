@@ -2,7 +2,7 @@
 /**
  * @Author: fengsc
  * @Date: 2022-06-06 10:41:56
- * @LastEditTime: 2022-06-06 10:58:11
+ * @LastEditTime: 2022-06-06 11:31:31
  */
 import java.util.*;
 import java.util.function.*;
@@ -17,14 +17,23 @@ public class ParallelStreamPuzzle {
             return current++;
         }
     }
+
     public static void main(String[] args) {
-        List<Integer> x = Stream.generate(new IntGenerator())
-                .limit(10)
+        Stream.generate(new IntGenerator())
+                .limit(100)
                 .parallel()
-                .collect(Collectors.toList());
+                .forEach(number -> System.out.println(number + "  " + Thread.currentThread().getName()));
+        // 乱序
+
+        Timer timer = new Timer();
+
+        List<Integer> x = Stream.generate(new IntGenerator())
+                .limit(100)
+                .parallel()
+                .collect(Collectors.toList());// sequential and parallel executions produce equivalent results
+        // 顺序
+        System.out.println(timer.duration());
         System.out.println(x);
-        List<Integer> listOfNumbers = Arrays.asList(1, 2, 3, 4);
-        listOfNumbers.parallelStream()
-                .forEach(number -> System.out.println(number + " " + Thread.currentThread().getName()));
+
     }
 }
