@@ -2,8 +2,10 @@
     "java.project.sourcePaths": [
         "stream",
         "functional",
+        "files",
+        "concurrent",
         "collections",
-        "concurrent"
+        "typeinfo"
     ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
