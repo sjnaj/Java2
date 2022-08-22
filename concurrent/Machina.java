@@ -1,10 +1,4 @@
 
-/**
- * @Author: fengsc
- * @Date: 2022-06-06 15:24:13
- * @LastEditTime: 2022-06-06 18:09:37
- */
-
 public class Machina {
 
     public enum State {

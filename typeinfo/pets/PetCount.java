@@ -38,6 +38,6 @@ public class PetCount {
                 .peek(petCount::count)
                 .forEach(p -> System.out.print(
                         p.getClass().getSimpleName() + " "));
-        System.out.println("n" + petCount);
+        System.out.println("\n" + petCount);
     }
 }

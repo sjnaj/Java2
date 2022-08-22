@@ -1,7 +1,7 @@
 /**
  * @Author: fengsc
  * @Date: 2022-08-05 18:39:41
- * @LastEditTime: 2022-08-05 18:44:54
+ * @LastEditTime: 2022-08-06 14:16:39
  */
 package pets;
 
@@ -16,7 +16,7 @@ public abstract class PetCreator implements Supplier<Pet> {
 
     @Override
     public Pet get() {
-        int n = new Random().nextInt(types().size());
+        int n = rand.nextInt(types().size());
         try {
             return types().get(n).getDeclaredConstructor().newInstance();
         } catch (InstantiationException | IllegalAccessException | IllegalArgumentException | NoSuchMethodException
